@@ -11,8 +11,26 @@ package Task1;
 
 import java.util.ArrayList;
 
-
 public class Task1 {
+
+    public static int[] GetException(int arg[]) throws Exception {
+        if (arg == null)
+            throw new Exception("Значение не может быть пустым");
+        return arg;
+    }
+
+    public static int GetException2(int arg) throws Exception {
+        if (arg < 0)
+            throw new Exception("Значение не может быть меньше нуля");
+        return arg;
+    }
+
+    public static float GetException3(int arg1, int arg2) throws Exception {
+        if (arg2 == 0)
+            throw new Exception("На ноль делить нельзя");
+        float quotient = arg1 / arg2;
+        return quotient;
+    }
 
     public static ArrayList GetDiffArray(int arr1[], int arr2[]) throws Exception {
         if (arr1.length != arr2.length)
